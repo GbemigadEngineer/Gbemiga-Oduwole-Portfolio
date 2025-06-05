@@ -59,3 +59,87 @@ document.querySelectorAll(".nav-link").forEach((link) => {
     }
   });
 });
+
+// Smooth scrolling functionality
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    const targetId = this.getAttribute("href");
+    if (targetId === "#") return;
+
+    const targetElement = document.querySelector(targetId);
+    if (!targetElement) return;
+
+    // Close mobile menu if open
+    if (navbarNav.classList.contains("active")) {
+      navbarNav.classList.remove("active");
+      const icon = menuToggle.querySelector("i");
+      icon.classList.remove("fa-times");
+      icon.classList.add("fa-bars");
+    }
+
+    // Calculate position with navbar offset
+    const navbarHeight = document.querySelector(".navbar").offsetHeight;
+    const targetPosition =
+      targetElement.getBoundingClientRect().top +
+      window.pageYOffset -
+      navbarHeight;
+
+    // Smooth scroll to target
+    window.scrollTo({
+      top: targetPosition,
+      behavior: "smooth",
+    });
+  });
+});
+
+// Active section highlighting
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".nav-link");
+
+function highlightActiveSection() {
+  let currentSection = "";
+
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.offsetHeight;
+    const navbarHeight = document.querySelector(".navbar").offsetHeight;
+
+    if (window.pageYOffset >= sectionTop - navbarHeight - 50) {
+      currentSection = section.getAttribute("id");
+    }
+  });
+
+  navLinks.forEach((link) => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === `#${currentSection}`) {
+      link.classList.add("active");
+    }
+  });
+}
+
+// Scroll progress indicator
+const progressBar = document.querySelector(".scroll-progress");
+
+function updateProgressBar() {
+  const scrollPosition = window.pageYOffset;
+  const documentHeight =
+    document.documentElement.scrollHeight -
+    document.documentElement.clientHeight;
+  const scrollPercentage = (scrollPosition / documentHeight) * 100;
+
+  progressBar.style.width = `${scrollPercentage}%`;
+}
+
+// Initialize scroll effects
+window.addEventListener("scroll", () => {
+  highlightActiveSection();
+  updateProgressBar();
+});
+
+// Initialize on load
+document.addEventListener("DOMContentLoaded", () => {
+  highlightActiveSection();
+  updateProgressBar();
+});
