@@ -627,7 +627,7 @@
       
       <div class="contact-form-container">
         <h3 class="form-heading">Send Me a Message</h3>
-        <form class="contact-form" id="enquiryForm">
+        <form class="contact-form" id="enquiryForm" name="contact" netlify>
           <div class="form-group">
             <label for="name" class="form-label">Name</label>
             <input type="text" id="name" class="form-input" placeholder="Your name" required>
@@ -656,6 +656,39 @@
       </div>
     </div>
   </section>
+<!-- Form Modals -->
+   <!-- Success Modal -->
+    <div class="modal" id="successModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title">Success!</h3>
+          <button class="close-modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <p>Your message has been sent successfully. I'll get back to you soon!</p>
+        </div>
+        <div class="modal-footer">
+          <button class="modal-button close-modal">OK</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Error Modal -->
+    <div class="modal" id="errorModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title">Error</h3>
+          <button class="close-modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <p id="errorMessage">Please fill in all required fields.</p>
+        </div>
+        <div class="modal-footer">
+          <button class="modal-button close-modal">OK</button>
+        </div>
+      </div>
+    </div>
+
   
   <!-- Footer with Social Links -->
   <footer class="footer">
@@ -672,7 +705,7 @@
           <i class="fab fa-twitter"></i>
         </a>
       </div>
-      <p class="copyright">© 2023 Gbemiga Oduwole. All Rights Reserved.</p>
+      <p class="copyright">© <span id="current-year">2023</span>  Gbemiga Oduwole. All Rights Reserved.</p>
     </div>
   </footer>
 

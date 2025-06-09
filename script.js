@@ -231,3 +231,85 @@ style.textContent = `
       }
     `;
 document.head.appendChild(style);
+
+// Modal functionality
+const modals = document.querySelectorAll(".modal");
+const closeButtons = document.querySelectorAll(".close-modal");
+
+function openModal(modalId) {
+  const modal = document.getElementById(modalId);
+  modal.classList.add("active");
+}
+
+function closeModal(modal) {
+  modal.classList.remove("active");
+}
+
+closeButtons.forEach((button) => {
+  button.addEventListener("click", function () {
+    const modal = this.closest(".modal");
+    closeModal(modal);
+  });
+});
+
+modals.forEach((modal) => {
+  modal.addEventListener("click", function (e) {
+    if (e.target === modal) {
+      closeModal(modal);
+    }
+  });
+});
+
+// Contact form validation and submission
+document.getElementById("enquiryForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  // Form validation
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const subject = document.getElementById("subject").value.trim();
+  const message = document.getElementById("message").value.trim();
+
+  if (!name || !email || !subject || !message) {
+    document.getElementById("errorMessage").textContent =
+      "Please fill in all required fields.";
+    openModal("errorModal");
+    return;
+  }
+
+  // Email validation
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    document.getElementById("errorMessage").textContent =
+      "Please enter a valid email address.";
+    openModal("errorModal");
+    return;
+  }
+
+  // Form submission to Netlify
+  const formData = new FormData(this);
+
+  fetch("/", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams(formData).toString(),
+  })
+    .then((response) => {
+      if (response.ok) {
+        openModal("successModal");
+        this.reset();
+      } else {
+        throw new Error("Form submission failed");
+      }
+    })
+    .catch((error) => {
+      document.getElementById("errorMessage").textContent =
+        "There was an error submitting your form. Please try again.";
+      openModal("errorModal");
+      console.error("Form submission error:", error);
+    });
+});
+
+// FOOTER
+// Set current year in footer
+document.getElementById("current-year").textContent = new Date().getFullYear();
