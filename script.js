@@ -143,3 +143,91 @@ document.addEventListener("DOMContentLoaded", () => {
   highlightActiveSection();
   updateProgressBar();
 });
+
+// Project filtering functionality
+document.addEventListener("DOMContentLoaded", function () {
+  const filterButtons = document.querySelectorAll(".filter-btn");
+  const projectCards = document.querySelectorAll(".project-card");
+
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      // Update active button
+      filterButtons.forEach((btn) => btn.classList.remove("active"));
+      button.classList.add("active");
+
+      const filter = button.getAttribute("data-filter");
+
+      // Filter projects
+      projectCards.forEach((card) => {
+        if (filter === "all" || card.getAttribute("data-type") === filter) {
+          card.style.display = "flex";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    });
+  });
+});
+
+// Contact form submission
+document.getElementById("enquiryForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  // Form data collection
+  const formData = {
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    subject: document.getElementById("subject").value,
+    message: document.getElementById("message").value,
+  };
+
+  // Show success message
+  alert(
+    `Thank you ${formData.name}! Your message has been sent successfully. I'll get back to you soon.`
+  );
+
+  // Reset form
+  this.reset();
+});
+
+// Copy to clipboard functionality
+function copyToClipboard(text) {
+  const tempInput = document.createElement("input");
+  tempInput.value = text;
+  document.body.appendChild(tempInput);
+  tempInput.select();
+  document.execCommand("copy");
+  document.body.removeChild(tempInput);
+
+  // Show feedback
+  const notification = document.createElement("div");
+  notification.textContent = `Copied: ${text}`;
+  notification.style.position = "fixed";
+  notification.style.bottom = "20px";
+  notification.style.right = "20px";
+  notification.style.padding = "10px 20px";
+  notification.style.background = "#2c3e50";
+  notification.style.color = "white";
+  notification.style.borderRadius = "4px";
+  notification.style.zIndex = "10000";
+  notification.style.boxShadow = "0 4px 12px rgba(0,0,0,0.15)";
+  notification.style.animation = "fadeInOut 3s forwards";
+
+  document.body.appendChild(notification);
+
+  setTimeout(() => {
+    document.body.removeChild(notification);
+  }, 2500);
+}
+
+// Add animation for notification
+const style = document.createElement("style");
+style.textContent = `
+      @keyframes fadeInOut {
+        0% { opacity: 0; transform: translateY(10px); }
+        20% { opacity: 1; transform: translateY(0); }
+        80% { opacity: 1; transform: translateY(0); }
+        100% { opacity: 0; transform: translateY(10px); }
+      }
+    `;
+document.head.appendChild(style);
