@@ -169,27 +169,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// Contact form submission
-document.getElementById("enquiryForm").addEventListener("submit", function (e) {
-  e.preventDefault();
-
-  // Form data collection
-  const formData = {
-    name: document.getElementById("name").value,
-    email: document.getElementById("email").value,
-    subject: document.getElementById("subject").value,
-    message: document.getElementById("message").value,
-  };
-
-  // Show success message
-  alert(
-    `Thank you ${formData.name}! Your message has been sent successfully. I'll get back to you soon.`
-  );
-
-  // Reset form
-  this.reset();
-});
-
 // Copy to clipboard functionality
 function copyToClipboard(text) {
   const tempInput = document.createElement("input");
@@ -232,7 +211,6 @@ style.textContent = `
     `;
 document.head.appendChild(style);
 
-// Modal functionality
 // Modal functionality
 const modals = document.querySelectorAll(".modal");
 const closeButtons = document.querySelectorAll(".close-modal");
@@ -310,7 +288,6 @@ document.getElementById("enquiryForm").addEventListener("submit", function (e) {
       console.error("Form submission error:", error);
     });
 });
-
 // FOOTER
 // Set current year in footer
 document.getElementById("current-year").textContent = new Date().getFullYear();
