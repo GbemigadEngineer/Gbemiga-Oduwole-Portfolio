@@ -233,6 +233,7 @@ style.textContent = `
 document.head.appendChild(style);
 
 // Modal functionality
+// Modal functionality
 const modals = document.querySelectorAll(".modal");
 const closeButtons = document.querySelectorAll(".close-modal");
 
