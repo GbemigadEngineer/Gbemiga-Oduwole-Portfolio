@@ -1,4 +1,5 @@
 "use strict";
+
 // Mobile menu toggle
 const menuToggle = document.getElementById("menuToggle");
 const navbarNav = document.getElementById("navbarNav");
@@ -57,6 +58,16 @@ document.querySelectorAll(".nav-link").forEach((link) => {
       menuToggle.querySelector("i").classList.remove("fa-times");
       menuToggle.querySelector("i").classList.add("fa-bars");
     }
+  });
+});
+
+// Get in touch and hero contact me button implementation
+document.querySelectorAll(".cta-button").forEach((button) => {
+  button.addEventListener("click", (event) => {
+    event.preventDefault();
+    document.getElementById("contact").scrollIntoView({
+      behavior: "smooth",
+    });
   });
 });
 
