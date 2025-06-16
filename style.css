@@ -56,6 +56,10 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
   scroll-behavior: smooth;
 }
+body,
+html {
+  overflow-x: hidden;
+}
 
 /* NAVBAR STYLE */
 .navbar {
@@ -175,6 +179,16 @@ body {
   background-color: var(--background-alt);
 }
 
+/* Container sections */
+/* Add this to prevent all horizontal scrolling */
+.container-sections {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+section {
+  overflow-x: hidden;
+}
 /* HERO SECTION */
 .hero {
   display: flex;
@@ -1130,8 +1144,33 @@ body {
 
   .hero-heading {
     font-size: 2.5rem;
+    line-height: 1.2;
   }
 
+  .hero-subheading {
+    font-size: 1.3rem;
+  }
+  .hero-content {
+    padding: 0 15px;
+  }
+
+  .profile-frame {
+    max-width: 280px;
+    margin: 0 auto;
+  }
+  .gradient-border {
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+  .skills-list {
+    grid-template-columns: repeat(2, minmax(120px, 1fr));
+  }
   .category-title {
     font-size: 1.6rem;
   }
@@ -1170,7 +1209,10 @@ body {
   }
 
   .hero-subheading {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
+  }
+  .hero-description {
+    font-size: 1rem;
   }
 
   .greeting {
@@ -1190,7 +1232,10 @@ body {
   }
 
   .skills-list {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
+  }
+  .skill-item {
+    max-width: 100%;
   }
 }
 
