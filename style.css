@@ -617,6 +617,10 @@ section {
   flex-direction: column;
 }
 
+.section-note {
+  margin-bottom: 30px;
+}
+
 .project-title {
   font-size: 1.5rem;
   margin-bottom: var(--spacing-xs);

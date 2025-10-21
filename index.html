@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Gbemiga Oduwole - Backend Web Developer & IT Technician Portfolio"
+    />
     <title>Gbemiga Oduwole | Portfolio</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap"
@@ -21,23 +25,25 @@
       <div class="modal-content">
         <div class="modal-header">
           <h3 class="modal-title">Success!</h3>
-          <button class="close-modal">&times;</button>
+          <button class="close-modal" aria-label="Close modal">&times;</button>
         </div>
         <div class="modal-body">
-          <p>Your message has been sent successfully. I'll get back to you soon!</p>
+          <p>
+            Your message has been sent successfully. I'll get back to you soon!
+          </p>
         </div>
         <div class="modal-footer">
           <button class="modal-button close-modal">OK</button>
         </div>
       </div>
     </div>
-    
+
     <!-- Error Modal -->
     <div class="modal" id="errorModal">
       <div class="modal-content">
         <div class="modal-header">
           <h3 class="modal-title">Error</h3>
-          <button class="close-modal">&times;</button>
+          <button class="close-modal" aria-label="Close modal">&times;</button>
         </div>
         <div class="modal-body">
           <p id="errorMessage">Please fill in all required fields.</p>
@@ -47,781 +53,915 @@
         </div>
       </div>
     </div>
+
     <!-- Navbar -->
     <header class="navbar">
       <a href="#" class="navbar-brand">
         <span>Gbemiga Oduwole</span>
       </a>
 
-      <button class="menu-toggle" id="menuToggle">
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Toggle navigation menu"
+      >
         <i class="fas fa-bars"></i>
       </button>
 
-      <ul class="navbar-nav" id="navbarNav">
-        <li>
-          <a href="#home" class="nav-link"><i class="fas fa-home"></i> Home</a>
-        </li>
-        <li>
-          <a href="#about" class="nav-link"><i class="fas fa-user"></i> About</a>
-        </li>
-        <li>
-          <a href="#skills" class="nav-link"
-            ><i class="fas fa-laptop-code"></i> Skills & Toolskit</a
-          >
-        </li>
-        <li>
-          <a href="#projects" class="nav-link"
-            ><i class="fas fa-project-diagram"></i> Projects</a
-          >
-        </li>
-        <li>
-          <a href="#contact" class="nav-link"
-            ><i class="fas fa-envelope"></i> Contact</a
-          >
-        </li>
-        <li>
-          <button class="cta-button">
-            <i class="fas fa-paper-plane"></i>
-            <span>Get in Touch</span>
-          </button>
-        </li>
-        <li>
-          <button class="theme-toggle" id="themeToggle">
-            <i class="fas fa-moon"></i>
-          </button>
-        </li>
-      </ul>
+      <nav>
+        <ul class="navbar-nav" id="navbarNav">
+          <li>
+            <a href="#home" class="nav-link"
+              ><i class="fas fa-home"></i> Home</a
+            >
+          </li>
+          <li>
+            <a href="#skills" class="nav-link"
+              ><i class="fas fa-laptop-code"></i> Skills & Toolskit</a
+            >
+          </li>
+          <li>
+            <a href="#projects" class="nav-link"
+              ><i class="fas fa-project-diagram"></i> Projects</a
+            >
+          </li>
+          <li>
+            <a href="#about" class="nav-link"
+              ><i class="fas fa-user"></i> About</a
+            >
+          </li>
+          <li>
+            <a href="#contact" class="nav-link"
+              ><i class="fas fa-envelope"></i> Contact</a
+            >
+          </li>
+          <li>
+            <button class="cta-button">
+              <i class="fas fa-paper-plane"></i>
+              <span>Get in Touch</span>
+            </button>
+          </li>
+          <li>
+            <button
+              class="theme-toggle"
+              id="themeToggle"
+              aria-label="Toggle dark mode"
+            >
+              <i class="fas fa-moon"></i>
+            </button>
+          </li>
+        </ul>
+      </nav>
     </header>
+
     <main>
       <div class="container-sections">
-  <!-- Hero Section -->
-      <section class="hero" id="home">
-        <div class="hero-content">
-          <div class="hero-text">
-            <span class="greeting">Hello, I'm</span>
-            <h1 class="hero-heading">Gbemiga Oduwole</h1>
-            <h2 class="hero-subheading">
-              Backend Web Developer & IT Technician
-            </h2>
-            <p class="hero-description">
-              I build robust, scalable server-side solutions that power modern
-              web applications. With expertise in database design, API
-              development, and cloud infrastructure, I create efficient backend
-              systems that drive business success.
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+          <div class="hero-content">
+            <div class="hero-text">
+              <span class="greeting">Hello, I'm</span>
+              <h1 class="hero-heading">Gbemiga Oduwole</h1>
+              <h2 class="hero-subheading">
+                Backend Web Developer & IT Technician
+              </h2>
+              <p class="hero-description">
+                I build robust, scalable server-side solutions that power modern
+                web applications. With expertise in database design, API
+                development, and cloud infrastructure, I create efficient
+                backend systems that drive business success.
+              </p>
+              <div class="hero-cta">
+                <button class="cta-button">
+                  <i class="fas fa-comment"></i>
+                  <span>Contact Me</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="profile-frame">
+              <div class="gradient-border"></div>
+              <div class="profile-container">
+                <div class="profile-image">
+                  <img src="./assets/Profilepic.jpg" alt="Gbemiga Oduwole" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skills" id="skills">
+          <div class="skills-container">
+            <h2 class="section-heading">Skills & Toolskit</h2>
+
+            <div class="skills-grid">
+              <div class="skill-category">
+                <div class="category-header">
+                  <i class="fas fa-code"></i>
+                  <h3 class="category-title">Programming Languages</h3>
+                </div>
+                <div class="skills-list">
+                  <div class="skill-item">
+                    <div class="skill-icon" style="color: #f0db4f">
+                      <i class="fab fa-js"></i>
+                    </div>
+                    <div class="skill-name">JavaScript</div>
+                  </div>
+                  <div class="skill-item">
+                    <div class="skill-icon" style="color: #3776ab">
+                      <i class="fab fa-python"></i>
+                    </div>
+                    <div class="skill-name">Python</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="skill-category">
+                <div class="category-header">
+                  <i class="fas fa-laptop-code"></i>
+                  <h3 class="category-title">Web Development</h3>
+                </div>
+                <div class="skills-list">
+                  <div class="skill-item">
+                    <div class="skill-icon" style="color: #e34c26">
+                      <i class="fab fa-html5"></i>
+                    </div>
+                    <div class="skill-name">HTML5</div>
+                  </div>
+                  <div class="skill-item">
+                    <div class="skill-icon" style="color: #2965f1">
+                      <i class="fab fa-css3-alt"></i>
+                    </div>
+                    <div class="skill-name">CSS3</div>
+                  </div>
+                  <div class="skill-item">
+                    <div class="skill-icon" style="color: #f0db4f">
+                      <i class="fab fa-js"></i>
+                    </div>
+                    <div class="skill-name">JavaScript</div>
+                  </div>
+                  <div class="skill-item">
+                    <div class="skill-icon" style="color: #339933">
+                      <i class="fab fa-node-js"></i>
+                    </div>
+                    <div class="skill-name">Node.js</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="skill-category">
+                <div class="category-header">
+                  <i class="fas fa-server"></i>
+                  <h3 class="category-title">Backend Technologies</h3>
+                </div>
+                <div class="skills-list">
+                  <div class="skill-item">
+                    <div class="skill-icon" style="color: #339933">
+                      <i class="fab fa-node-js"></i>
+                    </div>
+                    <div class="skill-name">Node.js</div>
+                  </div>
+                  <div class="skill-item">
+                    <div class="skill-icon" style="color: #68a063">
+                      <i class="fas fa-plug"></i>
+                    </div>
+                    <div class="skill-name">RESTful APIs</div>
+                  </div>
+                  <div class="skill-item">
+                    <div class="skill-icon" style="color: #e535ab">
+                      <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="skill-name">Express.js</div>
+                  </div>
+                  <div class="skill-item">
+                    <div class="skill-icon" style="color: #e10098">
+                      <i class="fas fa-code-branch"></i>
+                    </div>
+                    <div class="skill-name">GraphQL</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="skill-category">
+                <div class="category-header">
+                  <i class="fas fa-database"></i>
+                  <h3 class="category-title">Databases</h3>
+                </div>
+                <div class="skills-list">
+                  <div class="skill-item">
+                    <div class="skill-icon" style="color: #336791">
+                      <i class="fas fa-database"></i>
+                    </div>
+                    <div class="skill-name">PostgreSQL</div>
+                  </div>
+                  <div class="skill-item">
+                    <div class="skill-icon" style="color: #4db33d">
+                      <i class="fas fa-leaf"></i>
+                    </div>
+                    <div class="skill-name">MongoDB</div>
+                  </div>
+                  <div class="skill-item">
+                    <div class="skill-icon" style="color: #dc382d">
+                      <i class="fas fa-server"></i>
+                    </div>
+                    <div class="skill-name">Redis</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="skill-category">
+                <div class="category-header">
+                  <i class="fas fa-credit-card"></i>
+                  <h3 class="category-title">Payments</h3>
+                </div>
+                <div class="skills-list">
+                  <div class="skill-item">
+                    <div class="skill-icon" style="color: #008cdd">
+                      <i class="fab fa-stripe"></i>
+                    </div>
+                    <div class="skill-name">Stripe</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="skill-category">
+                <div class="category-header">
+                  <i class="fas fa-tools"></i>
+                  <h3 class="category-title">Development & Deployment Tools</h3>
+                </div>
+                <div class="skills-list">
+                  <div class="skill-item">
+                    <div class="skill-icon" style="color: #f05032">
+                      <i class="fab fa-git-alt"></i>
+                    </div>
+                    <div class="skill-name">Git</div>
+                  </div>
+                  <div class="skill-item">
+                    <div class="skill-icon" style="color: #2088ff">
+                      <i class="fab fa-docker"></i>
+                    </div>
+                    <div class="skill-name">Docker</div>
+                  </div>
+                  <div class="skill-item">
+                    <div class="skill-icon" style="color: #2088ff">
+                      <i class="fab fa-github"></i>
+                    </div>
+                    <div class="skill-name">GitHub</div>
+                  </div>
+                  <div class="skill-item">
+                    <div class="skill-icon" style="color: #ff6c37">
+                      <i class="fas fa-fire"></i>
+                    </div>
+                    <div class="skill-name">Postman</div>
+                  </div>
+                  <div class="skill-item">
+                    <div class="skill-icon" style="color: #00bb6b">
+                      <i class="fas fa-rocket"></i>
+                    </div>
+                    <div class="skill-name">Render</div>
+                  </div>
+                  <div class="skill-item">
+                    <div class="skill-icon" style="color: #0b0d0e">
+                      <i class="fas fa-train"></i>
+                    </div>
+                    <div class="skill-name">Railway</div>
+                  </div>
+                  <div class="skill-item">
+                    <div class="skill-icon" style="color: #ff9900">
+                      <i class="fab fa-aws"></i>
+                    </div>
+                    <div class="skill-name">AWS</div>
+                  </div>
+                  <div class="skill-item">
+                    <div class="skill-icon" style="color: #000000">
+                      <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="skill-name">Vercel</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="skill-category">
+                <div class="category-header">
+                  <i class="fas fa-network-wired"></i>
+                  <h3 class="category-title">IT & Networking</h3>
+                </div>
+                <div class="skills-list">
+                  <div class="skill-item">
+                    <div class="skill-icon" style="color: #00b0e9">
+                      <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="skill-name">Network Security</div>
+                  </div>
+                  <div class="skill-item">
+                    <div class="skill-icon" style="color: #00a0dc">
+                      <i class="fas fa-cogs"></i>
+                    </div>
+                    <div class="skill-name">System Troubleshooting</div>
+                  </div>
+                  <div class="skill-item">
+                    <div class="skill-icon" style="color: #0080ff">
+                      <i class="fas fa-cloud"></i>
+                    </div>
+                    <div class="skill-name">Cloud Infrastructure</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Project Section -->
+        <section class="projects" id="projects">
+          <div class="projects-container">
+            <h2 class="section-heading">My Projects</h2>
+
+            <p class="section-note">
+              <i class="fas fa-lock"></i>
+              For reasons related to
+              <strong>intellectual property (client work)</strong>,
+              <strong>production security</strong>, and the
+              <strong>proprietary nature of some APIs</strong>, I cannot
+              publicly display the code repositories for all projects. The
+              GitHub links provided represent open-source or personal projects.
+              Live Link buttons are included for future deployments where
+              applicable.
             </p>
-            <div class="hero-cta">
-              <button class="cta-button">
-                <i class="fas fa-comment"></i>
-                <span>Contact Me</span>
+
+            <div class="project-filters">
+              <button class="filter-btn active" data-filter="all">
+                All Projects
+              </button>
+              <button class="filter-btn" data-filter="backend">Backend</button>
+              <button class="filter-btn" data-filter="frontend">
+                Frontend
               </button>
             </div>
-          </div>
 
-          <div class="profile-frame">
-            <div class="gradient-border"></div>
-            <div class="profile-container">
-              <div class="profile-image">
-                <!-- Replace with your actual image -->
-                <!-- <div class="profile-placeholder">
-                  <i class="fas fa-user"></i>
-                </div> -->
-                <img src="./assets/Profilepic.jpg" alt="Gbemiga Oduwole" />
+            <div class="projects-grid">
+              <div class="project-card" data-type="frontend">
+                <div class="project-image">
+                  <img
+                    src="./assets/project screenshoot 1.png"
+                    alt="Tedex Travel Agency Website"
+                  />
+                  <div class="project-type">Frontend</div>
+                </div>
+                <div class="project-content">
+                  <h3 class="project-title">Tedex Travel Agency</h3>
+                  <p class="project-description">
+                    A responsive, on-budget website for Tedex Travel Agency,
+                    delivering a
+                    <strong>100% Mobile-Friendly</strong> experience and
+                    achieving <strong>PageSpeed scores over 90</strong> for
+                    optimal loading performance.
+                  </p>
+                  <div class="project-tech">
+                    <span class="tech-tag">HTML5</span>
+                    <span class="tech-tag">CSS3</span>
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">Netlify Forms</span>
+                  </div>
+                  <div class="project-links">
+                    <a
+                      href="https://tedextravel.org/"
+                      class="project-link demo-link"
+                    >
+                      <i class="fas fa-external-link-alt"></i> View Site
+                    </a>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      <!-- About Section -->
-      <section class="about" id="about">
-        <div class="section-container">
-          <h2 class="section-heading">About Me</h2>
+              <div class="project-card" data-type="backend">
+                <div class="github-placeholder">
+                  <i class="fas fa-graduation-cap"></i>
+                  <h3 class="project-title">Eduplex</h3>
+                </div>
+                <div class="project-content">
+                  <div class="project-type">Backend</div>
+                  <p class="project-description">
+                    A high-availability
+                    <strong>School Administration Automation API</strong>
+                    designed to streamline core academic and management tasks. I
+                    led the backend development, implementing
+                    <strong>secure user role management</strong>, integrating
+                    <strong>Stripe for payment processing</strong>, and
+                    utilizing a <strong>Bull-based queue system</strong> for
+                    efficient, non-blocking bulk email communication via Brevo.
+                    Built for scalability, it's capable of processing
+                    <strong>10,000+ daily data records</strong> for primary and
+                    secondary schools.
+                  </p>
+                  <div class="project-tech">
+                    <span class="tech-tag">Node.js</span>
+                    <span class="tech-tag">Express</span>
+                    <span class="tech-tag">MongoDB</span>
+                    <span class="tech-tag">Bull</span>
+                    <span class="tech-tag">Stripe</span>
+                    <span class="tech-tag">Brevo</span>
+                  </div>
+                </div>
+              </div>
 
-          <div class="about-content">
-            <!-- Professional Background -->
-            <article class="about-article">
-              <h3 class="article-heading">
-                <i class="fas fa-user"></i> Professional Background
-              </h3>
-              <div class="article-content">
-                <p>
-                  My journey into backend development began in January of last
-                  year, fueled by a passion for building robust and efficient
-                  web applications. Through intensive self-study via platforms
-                  like Udemy and Cisco Networking Academy, I've rapidly acquired
-                  proficiency in HTML, CSS, Python and JavaScript, and I'm
-                  currently specializing in Node.js. I'm adept with tools such
-                  as GitHub for version control and Postman for API testing. For
-                  database management, I have hands-on experience with
-                  PostgreSQL for relational data and MongoDB for NoSQL
-                  solutions. My focus is on creating well-structured server-side
-                  architectures and developing impactful APIs.
-                </p>
-                <p>
-                  I've already applied my skills to a successful project for a
-                  company, and I'm actively building and refining several
-                  personal projects on GitHub, showcasing my commitment to
-                  solving real-world problems through code. My previous
-                  experience in IT support in healthcare environments has
-                  further honed my technical problem-solving abilities and
-                  understanding of complex systems.
-                </p>
+              <div class="project-card" data-type="backend">
+                <div class="github-placeholder">
+                  <i class="fas fa-heartbeat"></i>
+                  <h3 class="project-title">FitPad</h3>
+                </div>
+                <div class="project-content">
+                  <div class="project-type">Backend</div>
+                  <p class="project-description">
+                    A secure, <strong>multi-tenant API</strong> for managing
+                    sensitive medical and fitness data across various industries
+                    (Medical, Sports, Education). It's designed for data
+                    privacy, adhering to
+                    <strong>HIPAA compliance standards</strong>. The
+                    architecture uses
+                    <strong>GraphQL for precise data fetching</strong>, reducing
+                    client-side overhead by up to <strong>60%</strong>, and
+                    includes <strong>Stripe integration</strong> for enterprise
+                    subscription billing and
+                    <strong>Google Analytics</strong> for performance tracking.
+                    The service is containerized with
+                    <strong>Docker</strong> for consistent deployment.
+                  </p>
+                  <div class="project-tech">
+                    <span class="tech-tag">Node.js</span>
+                    <span class="tech-tag">GraphQL</span>
+                    <span class="tech-tag">MongoDB</span>
+                    <span class="tech-tag">Stripe</span>
+                    <span class="tech-tag">Docker</span>
+                    <span class="tech-tag">Google Analytics</span>
+                  </div>
+                </div>
               </div>
-            </article>
-            <!-- Education & Approach -->
-            <article class="about-article">
-              <h3 class="article-heading">
-                <i class="fas fa-graduation-cap"></i> Education & Certifications
-              </h3>
-              <div class="article-content">
-                <p>
-                  <h4>B.Sc. Computer Science (Technology) Babcock University,
-                  Ilishan-Remo, Ogun State</h4><p>Nigeria Date of Graduation: July,
-                  2024.</p> <p>Relevant coursework included: Data Structures and
-                  Algorithms, Database Management Systems, Web Application
-                  Development.<p> 
-                  <h4>Certifications:</h4> 
-                  <li>Python Essentials 1 Issued by:
-                  Cisco Networking Academy.</li> 
-                  <li>  JavaScript Essentials 1 Issued by: Cisco Networking Academy</li>
-                 <li>Networking Basics Issued by: Cisco Networking Academy</li>  
-                </p>
-              </div>
-            </article>
-            <!-- Technical Philosophy -->
-            <article class="about-article">
-              <h3 class="article-heading">
-                <i class="fas fa-rocket"></i> Technical Philosophy
-              </h3>
-              <div class="article-content">
-                <p>
-                My approach to web development and life deeply rooted in a set of core principles that guide every line of code I write and every architectural decision I make. I believe in:
-                </p>
-                <ul>
-                  <li>
-                    <strong>Excellence</strong>: Striving for the highest quality in every aspect of development, from robust code to flawless execution, ensuring that the solutions I build are reliable and dependable.
-                  </li>
-                  <li>
-                    <strong>Providing Solutions</strong>: Focusing on understanding real-world problems and crafting effective, practical technological answers that directly address user needs and business objectives.
-                  </li>
-                  <li>
-                    <strong>Effectiveness</strong>: Ensuring that the applications and systems I develop not only work but also achieve their intended purpose with optimal performance and resource utilization.
-                  </li>
-                  <li>
-                    <strong>Trust</strong>: Building systems with integrity and transparency, fostering confidence in their security, accuracy, and long-term viability. This also extends to being a reliable and dependable team member.
-                  </li>
-                  <li>
-                    <strong>Creativity & Innovation</strong>: Approaching challenges with an open mind, exploring novel ideas, and continuously seeking new ways to enhance functionality, efficiency, and user experience.
-                  </li>
-                </ul>
-              </div>
-            </article>
 
-            <!-- Entrepreneurship -->
-            <article class="about-article">
-              <h3 class="article-heading">
-                <i class="fas fa-lightbulb"></i> Building Businesses, Not Just
-                Software.
-              </h3>
-              <div class="article-content">
-                <p>
-                  I founded <strong>Techson Unicore</strong> with a clear
-                  mission: to provide affordable, high-value digital solutions
-                  for business of all kinds across the world. We understand that many small and
-                  medium-sized enterprises cannot afford to spend millions on
-                  their digital presence. That's why we offer complete websites,
-                  web applications, and landing pages with valuable features at
-                  accessible price points, tailored to
-                  each business's specific needs and growth goals.
-                </p>
-                <p>
-                  My backend expertise enables us to create efficient,
-                  cost-effective solutions that integrate seamlessly with
-                  business operations. We build solutions that work within the
-                  financial constraints of SMEs while delivering maximum
-                  value.
-                </p>
+              <div class="project-card" data-type="backend">
+                <div class="github-placeholder">
+                  <i class="fas fa-database"></i>
+                  <h3 class="project-title">Database Optimization</h3>
+                </div>
+                <div class="project-content">
+                  <div class="project-type">Backend</div>
+                  <p class="project-description">
+                    Performance optimization project for a MongoDB database,
+                    successfully
+                    <strong>reducing average query times by 75%</strong> (from
+                    400ms to < 100ms) through strategic indexing and query
+                    tuning.
+                  </p>
+                  <div class="project-tech">
+                    <span class="tech-tag">MongoDB</span>
+                    <span class="tech-tag">NoSQL</span>
+                    <span class="tech-tag">Database Design</span>
+                  </div>
+                  <div class="project-links">
+                    <a
+                      href="https://github.com/GbemigadEngineer/natours-tut"
+                      class="project-link github-link"
+                    >
+                      <i class="fab fa-github"></i> GitHub Repo
+                    </a>
+                  </div>
+                </div>
+              </div>
 
-                <p>
-                  Founding and growing Techson Unicore has honed my leadership
-                  skills and ability to manage projects from initial concept
-                  through to successful delivery. We take pride in being more
-                  than just developers - we're business partners to our clients.
-                </p>
+              <div class="project-card" data-type="backend">
+                <div class="github-placeholder">
+                  <i class="fas fa-server"></i>
+                  <h3 class="project-title">Authentication System</h3>
+                </div>
+                <div class="project-content">
+                  <div class="project-type">Backend</div>
+                  <p class="project-description">
+                    A
+                    <strong
+                      >production-grade secure authentication system</strong
+                    >
+                    with OAuth 2.0 integration, advanced password hashing
+                    (Bcrypt), and a <strong>99.9% uptime</strong> reliability
+                    target for access control.
+                  </p>
+                  <div class="project-tech">
+                    <span class="tech-tag">Node.js</span>
+                    <span class="tech-tag">Express</span>
+                    <span class="tech-tag">JWT</span>
+                    <span class="tech-tag">OAuth</span>
+                  </div>
+                  <div class="project-links">
+                    <a
+                      href="https://github.com/GbemigadEngineer/natours-tut"
+                      class="project-link github-link"
+                    >
+                      <i class="fab fa-github"></i> GitHub Repo
+                    </a>
+                  </div>
+                </div>
               </div>
-            </article>
 
-            <!-- Why I Build -->
-            <article class="about-article">
-              <h3 class="article-heading">
-                <i class="fas fa-hands-helping"></i> Why I Build
-              </h3>
-              <div class="article-content">
-                <p>
-                  Technology should empower businesses, not burden them. I'm
-                  passionate about creating solutions that make a real
-                  difference for businesses of all kinds, helping them compete effectively
-                  in the digital economy.
-                </p>
+              <div class="project-card" data-type="backend">
+                <div class="github-placeholder">
+                  <i class="fas fa-server"></i>
+                  <h3 class="project-title">To-do List API</h3>
+                </div>
+                <div class="project-content">
+                  <div class="project-type">Backend</div>
+                  <p class="project-description">
+                    A full-featured To-Do List REST API, featuring secure
+                    authentication, password reset with
+                    <strong>real-world Brevo email delivery</strong>, and
+                    <strong>production-level CRUD operations</strong> for high
+                    data integrity.
+                  </p>
+                  <div class="project-tech">
+                    <span class="tech-tag">Node.js</span>
+                    <span class="tech-tag">Express</span>
+                    <span class="tech-tag">JWT</span>
+                    <span class="tech-tag">Brevo</span>
+                    <span class="tech-tag">MongoDB</span>
+                    <span class="tech-tag">Mongoose</span>
+                  </div>
+                  <div class="project-links">
+                    <a
+                      href="https://github.com/GbemigadEngineer/To--Do-List-API"
+                      class="project-link github-link"
+                    >
+                      <i class="fab fa-github"></i> GitHub Repo
+                    </a>
+                  </div>
+                </div>
               </div>
-              <div class="business-ctas">
-                <a href="https://techsonunicore.org/" class="business-cta website-cta">
-                  <i class="fas fa-globe"></i>
-                  <span>Visit Techson Unicore</span>
-                </a>
 
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-       <!-- Skills Section -->
-      <section class="skills" id="skills">
-        <div class="skills-container">
-          <h2 class="section-heading">Skills & Toolskit</h2>
-          
-          <div class="skills-grid">
-            <!-- Programming Languages -->
-            <div class="skill-category">
-              <div class="category-header">
-                <i class="fas fa-code"></i>
-                <h3 class="category-title">Programming Languages</h3>
-              </div>
-              <div class="skills-list">
-                <div class="skill-item">
-                  <div class="skill-icon" style="color: #f0db4f;">
-                    <i class="fab fa-js"></i>
-                  </div>
-                  <div class="skill-name">JavaScript</div>
+              <div class="project-card" data-type="backend">
+                <div class="github-placeholder">
+                  <i class="fas fa-cloud-sun"></i>
+                  <h3 class="project-title">Weather API Wrapper Service</h3>
                 </div>
-                <div class="skill-item">
-                  <div class="skill-icon" style="color: #3776ab;">
-                    <i class="fab fa-python"></i>
+                <div class="project-content">
+                  <div class="project-type">Backend</div>
+                  <p class="project-description">
+                    A lightweight service that wraps a public API, implementing
+                    a <strong>Redis-based caching layer</strong> to handle
+                    <strong>5x more requests</strong> while reducing redundant
+                    API calls and latency by <strong>50%</strong>.
+                  </p>
+                  <div class="project-tech">
+                    <span class="tech-tag">Node.js</span>
+                    <span class="tech-tag">Express</span>
+                    <span class="tech-tag">Redis</span>
+                    <span class="tech-tag">Visual Crossing API</span>
+                    <span class="tech-tag">Railway</span>
                   </div>
-                  <div class="skill-name">Python</div>
-                </div>
-              </div>
-            </div>
-            
-            <!-- Web Development -->
-            <div class="skill-category">
-              <div class="category-header">
-                <i class="fas fa-laptop-code"></i>
-                <h3 class="category-title">Web Development</h3>
-              </div>
-              <div class="skills-list">
-                <div class="skill-item">
-                  <div class="skill-icon" style="color: #e34c26;">
-                    <i class="fab fa-html5"></i>
+                  <div class="project-links">
+                    <a
+                      href="https://github.com/GbemigadEngineer/weather-api-service"
+                      class="project-link github-link"
+                    >
+                      <i class="fab fa-github"></i> GitHub Repo
+                    </a>
                   </div>
-                  <div class="skill-name">HTML5</div>
-                </div>
-                <div class="skill-item">
-                  <div class="skill-icon" style="color: #2965f1;">
-                    <i class="fab fa-css3-alt"></i>
-                  </div>
-                  <div class="skill-name">CSS3</div>
-                </div>
-                <div class="skill-item">
-                  <div class="skill-icon" style="color: #f0db4f;">
-                    <i class="fab fa-js"></i>
-                  </div>
-                  <div class="skill-name">JavaScript</div>
-                </div>
-                <div class="skill-item">
-                  <div class="skill-icon" style="color: #339933;">
-                    <i class="fab fa-node-js"></i>
-                  </div>
-                  <div class="skill-name">Node.js</div>
                 </div>
               </div>
-            </div>
-            
-            <!-- Backend Technologies -->
-            <div class="skill-category">
-              <div class="category-header">
-                <i class="fas fa-server"></i>
-                <h3 class="category-title">Backend Technologies</h3>
-              </div>
-              <div class="skills-list">
-                <div class="skill-item">
-                  <div class="skill-icon" style="color: #339933;">
-                    <i class="fab fa-node-js"></i>
-                  </div>
-                  <div class="skill-name">Node.js</div>
-                </div>
-                <div class="skill-item">
-                  <div class="skill-icon" style="color: #68a063;">
-                    <i class="fas fa-plug"></i>
-                  </div>
-                  <div class="skill-name">RESTful APIs</div>
-                </div>
-                <div class="skill-item">
-                  <div class="skill-icon" style="color: #e535ab;">
-                    <i class="fas fa-bolt"></i>
-                  </div>
-                  <div class="skill-name">Express.js</div>
-                </div>
-              </div>
-            </div>
-            
-            <!-- Databases -->
-            <div class="skill-category">
-              <div class="category-header">
-                <i class="fas fa-database"></i>
-                <h3 class="category-title">Databases</h3>
-              </div>
-              <div class="skills-list">
-                <div class="skill-item">
-                  <div class="skill-icon" style="color: #336791;">
-                    <i class="fas fa-database"></i>
-                  </div>
-                  <div class="skill-name">PostgreSQL</div>
-                </div>
-                <div class="skill-item">
-                  <div class="skill-icon" style="color: #4db33d;">
-                    <i class="fas fa-leaf"></i>
-                  </div>
-                  <div class="skill-name">MongoDB</div>
-                </div>
-              </div>
-            </div>
-            
-            <!-- Tools -->
-            <div class="skill-category">
-              <div class="category-header">
-                <i class="fas fa-tools"></i>
-                <h3 class="category-title">Development & Deployment Tools</h3>
-              </div>
-              <div class="skills-list">
-                <div class="skill-item">
-                  <div class="skill-icon" style="color: #f05032;">
-                    <i class="fab fa-git-alt"></i>
-                  </div>
-                  <div class="skill-name">Git</div>
-                </div>
-                 <div class="skill-item">
-                  <div class="skill-icon" style="color: #2088ff;">
-                   <i class="fab fa-docker"></i>
-                  </div>
-                  <div class="skill-name">Docker</div>
-                </div>
-                 <div class="skill-item">
-                  <div class="skill-icon" style="color: #f05032;">
-                    <i class="fas fa-envelope"></i>  
 
-                  </div>
-                  <div class="skill-name">Brevo</div>
+              <div class="project-card" data-type="backend">
+                <div class="github-placeholder">
+                  <i class="fas fa-server"></i>
+                  <h3 class="project-title">Expenser Backend</h3>
                 </div>
-                <div class="skill-item">
-                  <div class="skill-icon" style="color: #2088ff;">
-                    <i class="fab fa-github"></i>
+                <div class="project-content">
+                  <div class="project-type">Backend</div>
+                  <p class="project-description">
+                    An efficient expense tracking API with user authentication
+                    and flexible filtering, demonstrating
+                    <strong>RESTful best practices</strong> for robust and
+                    maintainable data management.
+                  </p>
+                  <div class="project-tech">
+                    <span class="tech-tag">Node.js</span>
+                    <span class="tech-tag">Express</span>
+                    <span class="tech-tag">Redis</span>
+                    <span class="tech-tag">Mongo DB</span>
+                    <span class="tech-tag">Railway</span>
                   </div>
-                  <div class="skill-name">GitHub</div>
-                </div>
-                <div class="skill-item">
-                  <div class="skill-icon" style="color: #ff6c37;">
-                    <i class="fas fa-fire"></i>
+                  <div class="project-links">
+                    <a
+                      href="https://github.com/GbemigadEngineer/Expense-Tracker-API"
+                      class="project-link github-link"
+                    >
+                      <i class="fab fa-github"></i> GitHub Repo
+                    </a>
+                    <a
+                      href="https://expense-tracker-api-2xjy.onrender.com/api/v1/expenser/expenses"
+                      class="project-link live-link disabled-link"
+                    >
+                      <i class="fas fa-globe"></i> Live Link
+                    </a>
                   </div>
-                  <div class="skill-name">Postman</div>
                 </div>
-               <div class="skill-item">
-                  <div class="skill-icon">
-                    <picture>
-                      <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg" 
-                        alt="VS Code" 
-                        style="width: 40px; height: 40px;">
-                    </picture>
-                  </div>
-                  <div class="skill-name">VS Code</div>
-                </div>
+              </div>
 
-              </div>
-            </div>
-            
-            <!-- IT Skills -->
-            <div class="skill-category">
-              <div class="category-header">
-                <i class="fas fa-network-wired"></i>
-                <h3 class="category-title">IT & Networking</h3>
-              </div>
-              <div class="skills-list">
-                <div class="skill-item">
-                  <div class="skill-icon" style="color: #00b0e9;">
-                    <i class="fas fa-shield-alt"></i>
-                  </div>
-                  <div class="skill-name">Network Security</div>
+              <div class="project-card" data-type="backend">
+                <div class="github-placeholder">
+                  <i class="fas fa-server"></i>
+                  <h3 class="project-title">Notaker</h3>
                 </div>
-                <div class="skill-item">
-                  <div class="skill-icon" style="color: #00a0dc;">
-                    <i class="fas fa-cogs"></i>
+                <div class="project-content">
+                  <div class="project-type">Backend</div>
+                  <p class="project-description">
+                    A robust RESTful API for note management, featuring
+                    <strong>resilient file uploads</strong> (Multer/Cloudinary)
+                    and built following
+                    <strong>CI/CD best practices</strong> (GitHub Actions) for
+                    reliable production deployment on platforms like Render.
+                  </p>
+                  <div class="project-tech">
+                    <span class="tech-tag">Node.js</span>
+                    <span class="tech-tag">Express</span>
+                    <span class="tech-tag">MongoDB</span>
+                    <span class="tech-tag">Multer</span>
+                    <span class="tech-tag">Render</span>
+                    <span class="tech-tag">Cloudinary</span>
                   </div>
-                  <div class="skill-name">System Troubleshooting</div>
-                </div>
-                <div class="skill-item">
-                  <div class="skill-icon" style="color: #0080ff;">
-                    <i class="fas fa-cloud"></i>
+                  <div class="project-links">
+                    <a
+                      href="https://github.com/GbemigadEngineer/NoteTaker"
+                      class="project-link github-link"
+                    >
+                      <i class="fab fa-github"></i> GitHub Repo
+                    </a>
+                    <a
+                      href="https://notetaker-l52m.onrender.com/api/v1/notetaker"
+                      class="project-link live-link disabled-link"
+                    >
+                      <i class="fas fa-globe"></i> Live Link
+                    </a>
                   </div>
-                  <div class="skill-name">Cloud Infrastructure</div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      
-  <!-- Projects Section -->
-  <section class="projects" id="projects">
-    <div class="projects-container">
-      <h2 class="section-heading">My Projects</h2>
-      
-      <div class="project-filters">
-        <button class="filter-btn active" data-filter="all">All Projects</button>
-        <button class="filter-btn" data-filter="backend">Backend</button>
-        <button class="filter-btn" data-filter="frontend">Frontend</button>
+        <!-- About Section -->
+        <section class="about" id="about">
+          <div class="section-container">
+            <h2 class="section-heading">About Me</h2>
+
+            <div class="about-content">
+              <!-- Education & Approach -->
+              <article class="about-article">
+                <h3 class="article-heading">
+                  <i class="fas fa-graduation-cap"></i> Education &
+                  Certifications
+                </h3>
+                <div class="article-content">
+                  <h4>
+                    B.Sc. Computer Science (Technology) Babcock University,
+                    Ilishan-Remo, Ogun State
+                  </h4>
+                  <p>Nigeria Date of Graduation: July, 2024.</p>
+                  <p>
+                    Relevant coursework included: Data Structures and
+                    Algorithms, Database Management Systems, Web Application
+                    Development.
+                  </p>
+                  <h4>Certifications:</h4>
+                  <ul>
+                    <li>
+                      Python Essentials 1 Issued by: Cisco Networking Academy.
+                    </li>
+                    <li>
+                      JavaScript Essentials 1 Issued by: Cisco Networking
+                      Academy
+                    </li>
+                    <li>
+                      Networking Basics Issued by: Cisco Networking Academy
+                    </li>
+                  </ul>
+                </div>
+              </article>
+
+              <!-- Entrepreneurship -->
+              <article class="about-article">
+                <h3 class="article-heading">
+                  <i class="fas fa-lightbulb"></i> Building Businesses, Not Just
+                  Software.
+                </h3>
+                <div class="article-content">
+                  <p>
+                    I founded <strong>Techson Unicore</strong> with a clear
+                    mission: to provide affordable, high-value digital solutions
+                    for business of all kinds across the world. We understand
+                    that many small and medium-sized enterprises cannot afford
+                    to spend millions on their digital presence. That's why we
+                    offer complete websites, web applications, and landing pages
+                    with valuable features at accessible price points, tailored
+                    to each business's specific needs and growth goals.
+                  </p>
+                  <p>
+                    My backend expertise enables us to create efficient,
+                    cost-effective solutions that integrate seamlessly with
+                    business operations. We build solutions that work within the
+                    financial constraints of SMEs while delivering maximum
+                    value.
+                  </p>
+                  <p>
+                    Founding and growing Techson Unicore has honed my leadership
+                    skills and ability to manage projects from initial concept
+                    through to successful delivery. We take pride in being more
+                    than just developers - we're business partners to our
+                    clients.
+                  </p>
+                </div>
+              </article>
+
+              <!-- Why I Build -->
+              <article class="about-article">
+                <h3 class="article-heading">
+                  <i class="fas fa-hands-helping"></i> Why I Build
+                </h3>
+                <div class="article-content">
+                  <p>
+                    Technology should empower businesses, not burden them. I'm
+                    passionate about creating solutions that make a real
+                    difference for businesses of all kinds, helping them compete
+                    effectively in the digital economy.
+                  </p>
+                </div>
+                <div class="business-ctas">
+                  <a
+                    href="https://techsonunicore.org/"
+                    class="business-cta website-cta"
+                  >
+                    <i class="fas fa-globe"></i>
+                    <span>Visit Techson Unicore</span>
+                  </a>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact" id="contact">
+          <div class="contact-decoration decoration-1">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div class="contact-decoration decoration-2">
+            <i class="fas fa-phone-alt"></i>
+          </div>
+
+          <div class="contact-container">
+            <div class="contact-info">
+              <h2 class="contact-heading">Get In Touch</h2>
+              <p class="contact-description">
+                Have a project in mind or want to discuss potential
+                opportunities? Feel free to reach out using any of these
+                methods. I typically respond within 24 hours.
+              </p>
+
+              <div class="contact-methods">
+                <div
+                  class="contact-method"
+                  onclick="copyToClipboard('+2348145814117')"
+                >
+                  <div class="contact-icon">
+                    <i class="fas fa-mobile-alt"></i>
+                  </div>
+                  <div class="method-details">
+                    <h3 class="method-title">Phone</h3>
+                    <p class="method-value">+2348145814117</p>
+                  </div>
+                </div>
+
+                <div
+                  class="contact-method"
+                  onclick="window.open('https://wa.me/+2348145814117', '_blank')"
+                >
+                  <div class="contact-icon">
+                    <i class="fab fa-whatsapp"></i>
+                  </div>
+                  <div class="method-details">
+                    <h3 class="method-title">WhatsApp</h3>
+                    <p class="method-value">+2348145814117</p>
+                  </div>
+                </div>
+
+                <div
+                  class="contact-method"
+                  onclick="copyToClipboard('oluwagbemigaoduwole@gmail.com')"
+                >
+                  <div class="contact-icon">
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                  <div class="method-details">
+                    <h3 class="method-title">Email</h3>
+                    <p class="method-value">oluwagbemigaoduwole@gmail.com</p>
+                  </div>
+                </div>
+              </div>
+
+              <p class="contact-description">
+                <strong>Note:</strong> Click on a contact method to either copy
+                the information or open the relevant app. For WhatsApp, clicking
+                will open a chat window.
+              </p>
+            </div>
+
+            <div class="contact-form-container">
+              <h3 class="form-heading">Send Me a Message</h3>
+              <form
+                class="contact-form"
+                id="enquiryForm"
+                name="contact"
+                method="POST"
+                netlify
+              >
+                <input type="hidden" name="form-name" value="contact" />
+
+                <div class="form-group">
+                  <label for="name" class="form-label">Name</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    class="form-input"
+                    placeholder="Your name"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="email" class="form-label">Email</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="form-input"
+                    placeholder="Your email address"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="subject" class="form-label">Subject</label>
+                  <input
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    class="form-input"
+                    placeholder="What is this regarding?"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="message" class="form-label">Message</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    class="form-textarea"
+                    placeholder="How can I help you?"
+                    required
+                  ></textarea>
+                </div>
+
+                <button type="submit" class="submit-button">
+                  <i class="fas fa-paper-plane"></i>
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+        </section>
+
+        <!-- Footer with Social Links -->
+        <footer class="footer">
+          <div class="footer-content">
+            <p class="footer-text">Connect with me on social media</p>
+            <div class="social-links">
+              <a href="https://github.com/GbemigadEngineer" class="social-link">
+                <i class="fab fa-github"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/oluwagbemigaoduwole2001/"
+                class="social-link"
+              >
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="https://x.com/Oluwagbemiga_7p" class="social-link">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
+            <p class="copyright">
+              © <span id="current-year">2023</span> Gbemiga Oduwole. All Rights
+              Reserved.
+            </p>
+          </div>
+        </footer>
       </div>
-      
-      <div class="projects-grid">
-        <!-- Project 1: Backend Project -->
-        <div class="project-card" data-type="backend">
-          <div class="github-placeholder">
-            <i class="fab fa-github"></i>
-            <h3 class="project-title">API Development Project</h3>
-          </div>
-          <div class="project-content">
-            <div class="project-type">Backend</div>
-            <p class="project-description">A RESTful API built with Node.js and Express, featuring user authentication, data validation, and MongoDB integration, Payment integration and more.</p>
-            <div class="project-tech">
-              <span class="tech-tag">Node.js</span>
-              <span class="tech-tag">Express</span>
-              <span class="tech-tag">MongoDB</span>
-              <span class="tech-tag">JWT</span>
-              <span class="tech-tag">Stripe</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/GbemigadEngineer/natours-tut" class="project-link github-link">
-                <i class="fab fa-github"></i> GitHub Repo
-              </a>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Project 2: Frontend Project -->
-        <div class="project-card" data-type="frontend">
-          <div class="project-image">
-            <img src="./assets/project screenshoot 1.png" alt="Tedex Travel Agency Website">
-            <div class="project-type">Frontend</div>
-          </div>
-          <div class="project-content">
-            <h3 class="project-title">Tedex Travel Agency</h3>
-            <p class="project-description">A responsive, and on budget website for Tedex travel Agency.</p>
-            <div class="project-tech">
-              <span class="tech-tag">HTML5</span>
-              <span class="tech-tag">CSS3</span>
-              <span class="tech-tag">JavaScript</span>
-              <span class="tech-tag">netlify forms</span>
-            </div>
-            <div class="project-links">
-              <a href="https://tedextravels.netlify.app/" class="project-link demo-link">
-                <i class="fas fa-external-link-alt"></i> View Site
-              </a>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Project 3: Backend Project -->
-        <div class="project-card" data-type="backend">
-          <div class="github-placeholder">
-            <i class="fas fa-database"></i>
-            <h3 class="project-title">Database Optimization</h3>
-          </div>
-          <div class="project-content">
-            <div class="project-type">Backend</div>
-            <p class="project-description">Performance optimization project for a MongoDB database, reducing query times by 75% through indexing and query optimization.</p>
-            <div class="project-tech">
-              <span class="tech-tag">MongoDB</span>
-              <span class="tech-tag">NoSQL</span>
-              <span class="tech-tag">Database Design</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/GbemigadEngineer/natours-tut" class="project-link github-link">
-                <i class="fab fa-github"></i> GitHub Repo
-              </a>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Project 4: Frontend Project -->
-        <div class="project-card" data-type="frontend">
-          <div class="project-image">
-            <img src="./assets/project screenshoot2.png" alt="Task Management App">
-            <div class="project-type">Frontend</div>
-          </div>
-          <div class="project-content">
-            <h3 class="project-title">Bankist</h3>
-            <p class="project-description"> A simple minimalist bank website</p>
-            <div class="project-tech">
-              <span class="tech-tag">HTML5</span>
-              <span class="tech-tag">CSS3</span>
-              <span class="tech-tag">JavaScript</span>
-            </div>
-            <div class="project-links">
-              <a href="https://minibankdemo.netlify.app/" class="project-link demo-link">
-                <i class="fas fa-external-link-alt"></i> View Site
-              </a>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Project 5: Backend Project -->
-        <div class="project-card" data-type="backend">
-          <div class="github-placeholder">
-            <i class="fas fa-server"></i>
-            <h3 class="project-title">Authentication System</h3>
-          </div>
-          <div class="project-content">
-            <div class="project-type">Backend</div>
-            <p class="project-description">Secure authentication system with OAuth 2.0 integration, password hashing, and role-based access control.</p>
-            <div class="project-tech">
-              <span class="tech-tag">Node.js</span>
-              <span class="tech-tag">Express</span>
-              <span class="tech-tag">JWT</span>
-              <span class="tech-tag">OAuth</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/GbemigadEngineer/natours-tut" class="project-link github-link">
-                <i class="fab fa-github"></i> GitHub Repo
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 6: Backend Project -->
-        <div class="project-card" data-type="backend">
-          <div class="github-placeholder">
-            <i class="fas fa-server"></i>
-            <h3 class="project-title">To-do List API</h3>
-          </div>
-          <div class="project-content">
-            <div class="project-type">Backend</div>
-            <p class="project-description">Secure authentication and authorization system, pashword hashing, password rest functionality with real world email sending, production level crud operartions.</p>
-            <div class="project-tech">
-              <span class="tech-tag">Node.js</span>
-              <span class="tech-tag">Express</span>
-              <span class="tech-tag">JWT</span>
-              <span class="tech-tag">Brevo</span>
-              <span class="tech-tag">MongoDB</span>
-              <span class="tech-tag">Mongoose</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/GbemigadEngineer/To--Do-List-API" class="project-link github-link">
-                <i class="fab fa-github"></i> GitHub Repo
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 7: Backend Project -->
-        <div class="project-card" data-type="backend">
-          <div class="github-placeholder">
-            <i class="fas fa-cloud-sun"></i> 
-            <h3 class="project-title">Weather API Wrapper Service</h3>
-          </div>
-          <div class="project-content">
-            <div class="project-type">Backend</div>
-            <p class="project-description">A lightweight backend service that wraps around a public weather API to deliver real-time weather data in a cleaner, controlled format. 
-              It includes a Redis-based caching system to reduce redundant API calls and improve performance. </p>
-            <div class="project-tech">
-              <span class="tech-tag">Node.js</span>
-              <span class="tech-tag">Express</span>
-              <span class="tech-tag">Redis</span>
-              <span class="tech-tag">Visual Crossing API</span>
-              <span class="tech-tag">Railway</span>
-             
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/GbemigadEngineer/weather-api-service" class="project-link github-link">
-                <i class="fab fa-github"></i> GitHub Repo
-              </a>
-            </div>
-          </div>
-        </div>
-
-         <!-- Project 8: Backend Project -->
-        <div class="project-card" data-type="backend">
-          <div class="github-placeholder">
-            <i class="fas fa-server"></i> 
-            <h3 class="project-title">Expenser Backend</h3>
-          </div>
-          <div class="project-content">
-            <div class="project-type">Backend</div>
-            <p class="project-description">A simple and efficient expense tracking API built with Node.js and MongoDB. Manage your personal expenses with user authentication, CRUD operations, and flexible filtering options.</p>
-            <div class="project-tech">
-              <span class="tech-tag">Node.js</span>
-              <span class="tech-tag">Express</span>
-              <span class="tech-tag">Redis</span>
-              <span class="tech-tag">Mongo DB</span>
-              <span class="tech-tag">Railway</span>
-             
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/GbemigadEngineer/Expense-Tracker-API" class="project-link github-link">
-                <i class="fab fa-github"></i> GitHub Repo
-              </a>
-            </div>
-          </div>
-        </div>
-
-         <!-- Project 9: Backend Project -->
-        <div class="project-card" data-type="backend">
-          <div class="github-placeholder">
-            <i class="fas fa-server"></i> 
-            <h3 class="project-title">Notaker</h3>
-          </div>
-          <div class="project-content">
-            <div class="project-type">Backend</div>
-            <p class="project-description">A robust and scalable RESTful API designed to manage user notes, featuring advanced server-side processing and a resilient file upload system. 
-              This project was developed following CI/CD best practices (GitHub Actions, feature branching) and built to be production-ready on ephemeral cloud platforms like Render and Railway. </p>
-            <div class="project-tech">
-              <span class="tech-tag">Node.js</span>
-              <span class="tech-tag">Express</span>
-              <span class="tech-tag">MongoDB</span>
-              <span class="tech-tag">Multer</span>
-              <span class="tech-tag">Render</span>
-              <span class="tech-tag">Cloudinary</span>
-             
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/GbemigadEngineer/NoteTaker" class="project-link github-link">
-                <i class="fab fa-github"></i> GitHub Repo
-              </a>
-            </div>
-          </div>
-        </div>
-
-
-
-        
-      </div>
-    </div>
-  </section>
-
-  
-
-  <!-- Contact Section -->
-
- 
-  <section class="contact" id="contact">
-    <div class="contact-decoration decoration-1">
-      <i class="fas fa-envelope"></i>
-    </div>
-    <div class="contact-decoration decoration-2">
-      <i class="fas fa-phone-alt"></i>
-    </div>
-    
-    <div class="contact-container">
-      <div class="contact-info">
-        <h2 class="contact-heading">Get In Touch</h2>
-        <p class="contact-description">
-          Have a project in mind or want to discuss potential opportunities? 
-          Feel free to reach out using any of these methods. I typically respond 
-          within 24 hours.
-        </p>
-        
-        <div class="contact-methods">
-          <div class="contact-method" onclick="copyToClipboard('+2348145814117')">
-            <div class="contact-icon">
-              <i class="fas fa-mobile-alt"></i>
-            </div>
-            <div class="method-details">
-              <h3 class="method-title">Phone</h3>
-              <p class="method-value">+2348145814117</p>
-            </div>
-          </div>
-          
-          <div class="contact-method" onclick="window.open('https://wa.me/+2348145814117', '_blank')">
-            <div class="contact-icon">
-              <i class="fab fa-whatsapp"></i>
-            </div>
-            <div class="method-details">
-              <h3 class="method-title">WhatsApp</h3>
-              <p class="method-value">+2348145814117</p>
-            </div>
-          </div>
-          
-          <div class="contact-method" onclick="copyToClipboard('oluwagbemigaoduwole@gmail.com')">
-            <div class="contact-icon">
-              <i class="fas fa-envelope"></i>
-            </div>
-            <div class="method-details">
-              <h3 class="method-title">Email</h3>
-              <p class="method-value">oluwagbemigaoduwole@gmail.com</p>
-            </div>
-          </div>
-        </div>
-        
-        <p class="contact-description">
-          <strong>Note:</strong> Click on a contact method to either copy the information 
-          or open the relevant app. For WhatsApp, clicking will open a chat window.
-        </p>
-      </div>
-      
-  <div class="contact-form-container">
-        <h3 class="form-heading">Send Me a Message</h3>
-        <form class="contact-form" id="enquiryForm" name="contact" method="POST" netlify>
-          <input type="hidden" name="form-name" value="contact">
-          
-          <div class="form-group">
-            <label for="name" class="form-label">Name</label>
-            <input type="text" id="name" name="name" class="form-input" placeholder="Your name" required>
-          </div>
-          
-          <div class="form-group">
-            <label for="email" class="form-label">Email</label>
-            <input type="email" id="email" name="email" class="form-input" placeholder="Your email address" required>
-          </div>
-          
-          <div class="form-group">
-            <label for="subject" class="form-label">Subject</label>
-            <input type="text" id="subject" name="subject" class="form-input" placeholder="What is this regarding?" required>
-          </div>
-          
-          <div class="form-group">
-            <label for="message" class="form-label">Message</label>
-            <textarea id="message" name="message" class="form-textarea" placeholder="How can I help you?" required></textarea>
-          </div>
-          
-          <button type="submit" class="submit-button">
-            <i class="fas fa-paper-plane"></i>
-            Send Message
-          </button>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer with Social Links -->
-  <footer class="footer">
-    <div class="footer-content">
-      <p class="footer-text">Connect with me on social media</p>
-      <div class="social-links">
-        <a href="https://github.com/GbemigadEngineer" class="social-link">
-          <i class="fab fa-github"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/oluwagbemigaoduwole2001/" class="social-link">
-          <i class="fab fa-linkedin-in"></i>
-        </a>
-        <a href="https://x.com/Oluwagbemiga_7p" class="social-link">
-          <i class="fab fa-twitter"></i>
-        </a>
-      </div>
-      <p class="copyright">© <span id="current-year">2023</span>  Gbemiga Oduwole. All Rights Reserved.</p>
-    </div>
-  </footer>
-      </div>
-    
-
     </main>
 
     <script src="script.js"></script>
